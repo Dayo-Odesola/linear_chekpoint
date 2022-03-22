@@ -15,6 +15,25 @@
     const setTwo = [2, 4, 1, 9, 3];
     const distinct = [];
 
+    const sum = (a,b) => {
+      const filter_first = a.filter(item => {
+        return !b.includes(item);
+      });
+
+      const second_filter = b.filter(item_2 => {
+        return !a.includes(item_2);
+      })
+
+      const total = second_filter.concat(filter_first);
+      let final = 0;
+      for(let i = 0; i< total.ength; i++){
+        final += total[i];
+      }
+      return final;
+    }
+
+    console.log(sum([3,1,7,9],[2,4,1,9,3]));
+
   </script>
 </body>
 </html>
